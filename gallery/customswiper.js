@@ -1,4 +1,4 @@
- let mainSliderSelector = '.main-slider',
+let mainSliderSelector = '.main-slider',
     navSliderSelector = '.nav-slider',
     interleaveOffset = 0.5;
 
@@ -28,14 +28,14 @@ let mainSliderOptions = {
         slideChangeTransitionEnd: function(){
           let swiper = this,
               captions = swiper.el.querySelectorAll('.caption');
-          for (let i = 0; i < captions.length; ++i) {
+          for (let i = 0; i &lt; captions.length; ++i) {
             captions[i].classList.remove('show');
           }
           swiper.slides[swiper.activeIndex].querySelector('.caption').classList.add('show');
         },
         progress: function(){
           let swiper = this;
-          for (let i = 0; i < swiper.slides.length; i++) {
+          for (let i = 0; i &lt; swiper.slides.length; i++) {
             let slideProgress = swiper.slides[i].progress,
                 innerOffset = swiper.width * interleaveOffset,
                 innerTranslate = slideProgress * innerOffset;
@@ -45,13 +45,13 @@ let mainSliderOptions = {
         },
         touchStart: function() {
           let swiper = this;
-          for (let i = 0; i < swiper.slides.length; i++) {
+          for (let i = 0; i &lt; swiper.slides.length; i++) {
             swiper.slides[i].style.transition = "";
           }
         },
         setTransition: function(speed) {
           let swiper = this;
-          for (let i = 0; i < swiper.slides.length; i++) {
+          for (let i = 0; i &lt; swiper.slides.length; i++) {
             swiper.slides[i].style.transition = speed + "ms";
             swiper.slides[i].querySelector(".slide-bgimg").style.transition =
               speed + "ms";
